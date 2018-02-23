@@ -15,8 +15,6 @@ export function fetchPhotos(tag){
   const url = `${ROOT_URL}${SEC}&tags=${tag}${PER_PAGE}${PAGES}${FORMAT}`;
   const request = axios.get(url);
 
-  console.log('Request', request);
-
   return{
     type: FETCH_PHOTOS,
     payload: request
