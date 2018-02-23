@@ -14,28 +14,29 @@ class SearchBar extends Component{
   }
 
   onInputChange(event){
-    // console.log(event.target.value);
     this.setState({term: event.target.value});
   }
 
   onFormSubmit(event){
     event.preventDefault();
 
-    this.props.fetchPhotos(this.state.term);
-    this.setState({term: ''}); //this clears the search bar
+    if(this.state.term.length > 0){
+      this.props.fetchPhotos(this.state.term);
+      this.setState({term: ''}); //this clears the search bar
+    }
   }
 
   render(){
     return(
-    <form onSubmit={this.onFormSubmit} className="input-group">
+    <form onSubmit={this.onFormSubmit} className="submit-form">
       <input
-        placeholder="Get pictures"
-        className="form-control"
+        className="login-input"
+        placeholder="Enter tag here"
         value={this.state.term}
         onChange={this.onInputChange}
         />
-      <span className="input-group-btn">
-        <button type="submit" className="btn btn-seconary">Submit</button>
+      <span>
+        <button type="submit" className="submit-button">Submit</button>
       </span>
     </form>
   );
