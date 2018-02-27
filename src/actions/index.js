@@ -4,7 +4,7 @@ import axios from 'axios';
 //https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=803155a8cfb51ac52e35c5793f4fd1cf&tags=cats&per_page=100&page=1&format=json&nojsoncallback=1
 
 const ROOT_URL = `https://api.flickr.com/services/rest/?method=flickr.photos.search`;
-const SEC = `&api_key=803155a8cfb51ac52e35c5793f4fd1cf`;
+const SEC = `&api_key=0141b5ce7b898dafa2c7abcbd94db021`;
 const FORMAT = `&format=json&nojsoncallback=1`;
 const PER_PAGE = `&per_page=30`;
 const PAGES= `&page=1`;
