@@ -26,6 +26,10 @@ class SearchBar extends Component{
     }
   }
 
+  componentDidMount(){
+    this.props.fetchPhotos("lakes");
+  }
+
   render(){
     return(
     <form onSubmit={this.onFormSubmit} className="submit-form">
