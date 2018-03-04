@@ -27,7 +27,7 @@ class SearchBar extends Component{
   }
 
   componentDidMount(){
-    this.props.fetchPhotos("lakes");
+    this.props.fetchPhotos("cherry blossoms");
   }
 
   render(){
